@@ -11,6 +11,8 @@ Rails.application.routes.draw do
 
   get "/faq" => "pages#faq"
 
+  resource :user                  #单数resource路由，少了index，网址不会有ID，路由方法不需要参数
+
   root "events#index"
 
 end

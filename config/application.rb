@@ -12,7 +12,8 @@ module RailsRecipes
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
 
-    config.i18n.default_locale = "zh-CN"
+    config.i18n.default_locale = "zh-CN"        #设置中文语系
+    config.time_zone = "Beijing"                #设置北京+8时区
 
   end
 end
