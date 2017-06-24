@@ -43,6 +43,7 @@ GEM
       execjs
     bcrypt (3.1.11)
     bindex (0.5.0)
+    bootstrap-datetimepicker-rails (0.0.11)
     bootstrap-sass (3.3.7)
       autoprefixer-rails (>= 5.2.1)
       sass (>= 3.3.4)
@@ -197,6 +198,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bootstrap-datetimepicker-rails
   bootstrap-sass
   byebug
   coffee-rails (~> 4.2)
