@@ -15,6 +15,10 @@ module RailsRecipes
     config.i18n.default_locale = "zh-CN"        #设置中文语系
     config.time_zone = "Beijing"                #设置北京+8时区
 
+    # 白名单过滤
+    config.action_view.sanitized_allowed_tags = Rails::Html::WhiteListSanitizer.allowed_tags + %w(table tr td)
+    config.action_view.sanitized_allowed_attributes = Rails::Html::WhiteListSanitizer.allowed_attributes + %w(style border)
+
   end
 end
 

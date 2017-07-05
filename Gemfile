@@ -41,6 +41,8 @@ gem "rails-i18n"
 gem "devise-i18n"
 gem "select2-rails"
 gem "nested_form_fields"
+gem "bootstrap-datepicker-rails"
+gem "ckeditor"
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
