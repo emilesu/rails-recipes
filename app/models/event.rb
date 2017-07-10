@@ -1,6 +1,8 @@
 class Event < ApplicationRecord
 
   mount_uploader :logo, EventLogoUploader
+  mount_uploaders :images, EventImageUploader
+  serialize :images, JSON
 
   validates_presence_of :name, :friendly_id
 
