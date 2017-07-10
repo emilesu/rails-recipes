@@ -19,8 +19,11 @@ class Registration < ApplicationRecord
     self.uuid
   end
 
+  scope :by_status, ->(s){ where( :status => s ) }
+  scope :by_ticket, ->(t){ where( :ticket_id => t ) }
+
   private
-  
+
   def check_event_status
     if self.event.status == "draft"
       errors.add(:base, "活动尚未开放报名")
