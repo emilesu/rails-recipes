@@ -1,8 +1,14 @@
 class Event < ApplicationRecord
 
-  mount_uploader :logo, EventLogoUploader
-  mount_uploaders :images, EventImageUploader
+  mount_uploader :logo, EventLogoUploader             #上传单图
+
+  mount_uploaders :images, EventImageUploader         #上传多图
   serialize :images, JSON
+
+  has_many :attachments, :class_name => "EventAttachment", :dependent => :destroy       #新建 model 上传多图
+  accepts_nested_attributes_for :attachments, :allow_destroy => true, :reject_if => :all_blank
+
+
 
   validates_presence_of :name, :friendly_id
 
