@@ -1,5 +1,7 @@
 class Event < ApplicationRecord
 
+  mount_uploader :logo, EventLogoUploader
+
   validates_presence_of :name, :friendly_id
 
   validates_uniqueness_of :friendly_id
@@ -35,5 +37,7 @@ class Event < ApplicationRecord
 
   scope :only_public, -> { where( :status => "public" ) }
   scope :only_available, -> { where( :status => ["public", "private"] ) }
+
+
 
 end

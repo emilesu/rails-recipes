@@ -48,6 +48,9 @@ gem "jquery-ui-rails"
 gem "kaminari"
 gem "ransack"
 
+gem "carrierwave"
+gem "mini_magick"
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
